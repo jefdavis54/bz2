@@ -23,4 +23,4 @@ module.exports = {
     "max-len": ["error", { code: 100, ignoreComments: true }],
     "no-unused-vars": ["warn"],
   },
-};
+}
