@@ -1,0 +1,19 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules/
+
+# Optional cache directories
+.npm
+.eslintcache
+.cache
+
+# dotenv environment variables file
+.env
+*.env.*
+
+# next.js build output
+.next

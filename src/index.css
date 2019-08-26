@@ -1,0 +1,569 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.4rem;
+}
+h1,
+h2,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  color: #2c2c2c;
+}
+h2 {
+  font-size: 4.6rem;
+}
+h3 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 3.8rem;
+  font-weight: 200;
+  color: #2c2c2c;
+}
+textarea,
+input {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #2c2c2c;
+  outline: none;
+  border: none;
+}
+input {
+  padding: 6px 0px 0px 15px;
+}
+textarea {
+  padding: 6px 15px;
+}
+button {
+  color: white;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  padding: 2rem 3.5rem;
+  background: #a6a3b4;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+button:hover {
+  background: #9c90a5;
+}
+a,
+button {
+  cursor: pointer;
+}
+#brands,
+#about,
+#store,
+#contact {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+#home:target::before,
+#brands:target::before,
+#about:target::before,
+#store:target::before,
+#contact:target::before {
+  content: "";
+  display: block;
+  height: 6.4rem; /* fixed header height - must match header height*/
+  margin-top: -6.4rem; /* negative fixed header height */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background: white;
+  height: 6.4rem;
+  width: 100%;
+}
+header h1 {
+  display: none;
+  font-size: 2.4rem;
+  letter-spacing: 0.11rem;
+}
+header li {
+  list-style-type: none;
+  text-align: center;
+  padding-bottom: 2.2rem;
+  padding-top: 2.2rem;
+  border-bottom: 0.2rem solid transparent;
+  transition: all 0.4s eas;
+}
+header li a {
+  width: 100%;
+  color: #2c2c2c;
+  font-size: 1.2rem;
+  letter-spacing: 0.3rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.4s eas;
+}
+header a:hover,
+header a.active {
+  color: #a6a3b4;
+}
+header li.active {
+  border-bottom: 0.2rem solid #a6a3b4;
+}
+#home {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "home";
+  padding-top: 6.4rem;
+  align-items: center;
+  text-align: center;
+  background: #000000;
+}
+#home h2 {
+  color: white;
+  font-size: 3.2rem;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+}
+#home h3 {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 1.6rem;
+  text-transform: uppercase;
+}
+#home a {
+  display: inline-block;
+  color: white;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 1.5rem 2.5rem;
+  border: 1px solid #ffffff;
+  background: transparent;
+  text-decoration: none;
+  transition: all 0.4s;
+}
+#home a:hover {
+  background: #c6c4d1;
+  border: 1px solid #c6c4d1;
+  transform: translateY(-0.2rem);
+}
+#home img {
+  grid-area: home;
+  z-index: 10;
+  width: 100%;
+}
+#home .content {
+  margin: 2rem auto;
+  grid-area: home;
+  z-index: 100;
+}
+
+#brands {
+  text-align: center;
+  padding-bottom: 6.4rem;
+}
+#brands .notices h2 {
+  font-size: 4.6rem;
+}
+#brands .notices h3 {
+  font-size: 3.2rem;
+}
+#brands .notice1,
+#brands .notice2,
+#brands .notice3 {
+  padding: 3rem 2rem 1rem 2rem;
+  line-height: 1.1;
+  flex-grow: 1;
+}
+#brands .notice1,
+#brands .notice3 {
+  background: #c6c4d1;
+}
+#brands .notice2 {
+  background: #e6e6e6;
+}
+#brands .notice2 h3 {
+  padding-bottom: 2rem;
+}
+#brands .notice3 img {
+  width: 12rem;
+  height: 12rem;
+}
+#brands p {
+  font-size: 1.1rem;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  padding-top: 1.5rem;
+}
+#brands a {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: 300;
+  letter-spacing: 4px;
+  padding-top: 2rem;
+  color: #a6a3b4;
+}
+#brands .details {
+  padding-top: 6.5rem;
+}
+#brands .subtitle {
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+#brands .title {
+  font-size: 2.6rem;
+  letter-spacing: 1.5px;
+  padding-bottom: 6.4rem;
+}
+#brands .logos {
+  width: 100%;
+  align-items: center;
+  border-top: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+}
+#brands .logos img {
+  object-fit: cover;
+  flex-grow: 1;
+  width: 100px;
+}
+#brands .logos .border {
+  border-bottom: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+}
+#brands .logos h3 {
+  text-align: center;
+}
+
+#brands .logos img .blank {
+  border: none;
+}
+
+#about .aboutText {
+  display: grid;
+  grid-template-columns: 1fr minmax(10rem, 20rem);
+  grid-template-areas: "one two";
+}
+#about .aboutText img {
+  grid-area: two;
+  width: 100%;
+  object-fit: fill;
+}
+#about .aboutText h4 {
+  grid-area: one;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  padding: 0.5rem 1rem;
+}
+#about .mailinglist {
+  background: #2c2c2c;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+#about .mailinglist h3 {
+  font-size: 2.6rem;
+  color: #ffffff;
+}
+#about .mailinglist p {
+  color: #c9c9c9;
+  letter-spacing: 1.5px;
+  font-size: 1.5rem;
+}
+#about .mailinglist form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0 0 0;
+}
+#about .mailinglist form > * {
+  padding: 0 0 4rem 0;
+}
+#about .mailinglist .frmSubscribe input:invalid:not(:placeholder-shown) {
+  border-bottom: 2px solid #d7244c;
+}
+#about .mailinglist .frmSubscribe input {
+  border: none;
+  color: #ffffff;
+  border-bottom: 2px solid #c9c9c9;
+  background: #2c2c2c;
+  width: 30rem;
+  height: 5rem;
+  margin: 0 2rem 0 0;
+  flex-basis: 100%;
+  min-width: 0;
+}
+#about .mailinglist .frmSubscribe label {
+  font-size: 1.4rem;
+  display: block;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+#store {
+  display: grid;
+}
+#store img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+#contact .location {
+  max-width: 550px;
+  flex-grow: 1;
+  padding: 3rem 1rem;
+  margin: 0 auto;
+  justify-self: center;
+  align-self: center;
+}
+#contact .title {
+  font-size: 4rem;
+  letter-spacing: 1.3px;
+  text-align: center;
+}
+#contact .subtitle {
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+  text-align: center;
+  text-transform: uppercase;
+}
+#contact li {
+  line-height: 2.2rem;
+  padding: 0 0 1rem 0;
+  list-style-type: none;
+}
+#contact .details {
+  margin: 4rem 0;
+  justify-content: center;
+}
+#contact .details h3 {
+  font-size: 1.6rem;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+}
+#contact .details p {
+  font-size: 1.6rem;
+  letter-spacing: 1.3px;
+  font-weight: 300;
+}
+#contact .details a {
+  color: #a6a3b4;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+#contact .details .address {
+  margin-right: 1.5rem;
+}
+#contact .socialmedia {
+  display: flex;
+  justify-content: center;
+}
+#contact .socialmedia a {
+  margin: 0 2rem 0 0;
+}
+#contact .socialmedia a:last-child {
+  margin: 0;
+}
+#contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 550px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  background: #e6e6e6;
+  box-sizing: content-box;
+}
+#contact label {
+  text-transform: uppercase;
+  color: #2c2c2c;
+  letter-spacing: 2.2px;
+  font-weight: 100;
+  font-size: 1.3rem;
+  padding: 2rem 0 0.8rem 0;
+}
+#contact input {
+  height: 45px;
+  width: 90%;
+}
+#contact textarea {
+  width: 90%;
+}
+#contact button {
+  padding: 0;
+  width: 18rem;
+  height: 5.6rem;
+  background: #a6a3b4;
+}
+#contact button:hover {
+  background: #a6a3b4;
+  font-size: 1.2rem;
+}
+#contact .align_checkbox {
+  display: grid;
+  grid-template-columns: 20px auto;
+  align-items: center;
+  padding: 0.5rem 0 5rem 0;
+  cursor: pointer;
+}
+#contact .align_checkbox input {
+  cursor: pointer;
+}
+#contact .align_checkbox label {
+  padding: 0 0 0 1rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-transform: none;
+  cursor: pointer;
+}
+
+footer {
+  background: #20161a;
+  color: #c9c9c9;
+  text-align: center;
+  padding: 4rem 0 3rem 0;
+  letter-spacing: 1.5px;
+}
+.btn_visit {
+  font-size: 1.6rem;
+}
+.flex-col {
+  display: flex;
+  flex-wrap: wrap;
+}
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.four-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.five-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.vmargin-small {
+  padding: 0 2rem;
+}
+.altFont {
+  font-family: "Slabo 27px", serif;
+  font-weight: 400;
+}
+.placeholder {
+  display: none;
+}
+
+@media (min-width: 360px) {
+  #contact .location {
+    max-width: 550px;
+    flex-grow: 1;
+    padding: 3rem 1rem;
+  }
+}
+@media (min-width: 650px) {
+  #home h2 {
+    font-size: 4.8rem;
+    letter-spacing: 4px;
+    margin-bottom: 3.6rem;
+  }
+  #home h3 {
+    font-size: 1.8rem;
+    letter-spacing: 4px;
+    margin-bottom: 1.6rem;
+  }
+  #home a {
+    letter-spacing: 4px;
+    padding: 2rem 3.5rem;
+  }
+  #about .aboutText h4 {
+    background: #ffffff;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    padding: 3.5rem;
+  }
+  #brands .subtitle {
+    font-size: 2rem;
+    letter-spacing: 2.5px;
+  }
+  #brands .title {
+    font-size: 3.6rem;
+    letter-spacing: 2px;
+  }
+  #brands .logos img {
+    width: 200px;
+  }
+  #about .aboutText {
+    display: grid;
+    grid-template-columns: 50rem 50rem;
+    grid-template-rows: 30rem 30rem;
+    grid-template-areas:
+      "two three"
+      "one four";
+    background-image: url("images/blockzuckermanopticians2.jpg");
+    background-size: cover;
+  }
+  #about .aboutText img {
+    display: none;
+  }
+  #contact form {
+    padding: 3rem 5rem;
+  }
+  #contact input {
+    width: 100%;
+  }
+  #contact textarea {
+    width: 100%;
+  }
+}
+@media (min-width: 860px) {
+  header {
+    padding: 0 2rem;
+  }
+  header h1,
+  #brands .logos .placeholder {
+    display: block;
+  }
+  header li {
+    width: 90px;
+  }
+  #about .mailinglist form {
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 4rem 0 4rem 0;
+  }
+  #about .mailinglist form > * {
+    padding: 0;
+  }
+}
+@media (min-width: 1030px) {
+  #brands .logos img {
+    width: 240px;
+  }
+}
+@media screen and (max-width: 1030px) and (min-width: 860px) {
+  #contact .location,
+  #contact form {
+    flex-basis: 400px;
+  }
+}
